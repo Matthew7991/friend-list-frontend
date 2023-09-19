@@ -1,4 +1,5 @@
 import React from "react"
+import Title from "../shared/Title"
 
 function AddContact() {
   const addFriend = (event) => {
@@ -22,58 +23,89 @@ function AddContact() {
   return (
     <main>
       <section>
-        <form onSubmit={addFriend}>
-          <h1>Add Friend</h1>
-          <div>
-            <label htmlFor="firstname">First name:</label>
+        <Title>Person i will be able to get money from</Title>
+        <form
+          onSubmit={addFriend}
+          className="flex flex-col gap-2 mx-auto w-fit">
+          <div className="flex gap-4">
+            <label
+              className="min-w-[110px]"
+              htmlFor="firstname">
+              First name:
+            </label>
             <input
               type="text"
               id="firstname"
               name="firstname"
             />
           </div>
-          <div>
-            <label htmlFor="lastname">Last name:</label>
+          <div className="flex gap-4">
+            <label
+              className="min-w-[110px]"
+              htmlFor="lastname">
+              Last name:
+            </label>
             <input
               type="text"
               id="lastname"
               name="lastname"
             />
           </div>
-          <div>
-            <label htmlFor="birthday">Birthday:</label>
+          <div className="flex gap-4">
+            <label
+              className="min-w-[110px]"
+              htmlFor="birthday">
+              Birthday:
+            </label>
             <input
+              className="flex-grow"
               type="date"
               id="birthday"
               name="birthday"
             />
           </div>
-          <div>
-            <label htmlFor="phone">Phone:</label>
+          <div className="flex gap-4">
+            <label
+              className="min-w-[110px]"
+              htmlFor="phone">
+              Phone:
+            </label>
             <input
               type="tel"
               id="phone"
               name="phone"
             />
           </div>
-          <div>
-            <label htmlFor="job">Job:</label>
+          <div className="flex gap-4">
+            <label
+              className="min-w-[110px]"
+              htmlFor="job">
+              Job:
+            </label>
             <input
               type="text"
               id="job"
               name="job"
             />
           </div>
-          <div>
-            <label htmlFor="verdienst">Verdienst:</label>
+          <div className="flex gap-4">
+            <label
+              className="min-w-[110px]"
+              htmlFor="verdienst">
+              Verdienst:
+            </label>
             <input
               type="number"
               id="verdienst"
               name="verdienst"
             />
           </div>
-          <div>
-            <label htmlFor="selfemployed">Self employed:</label>
+          <div className="flex gap-4">
+            <label
+              className="min-w-[110px]"
+              htmlFor="selfemployed">
+              Self employed:
+            </label>
             <input
               type="checkbox"
               id="selfemployed"
@@ -81,8 +113,12 @@ function AddContact() {
               defaultValue={true}
             />
           </div>
-          <div>
-            <label htmlFor="workedwith">Worked with:</label>
+          <div className="flex gap-4">
+            <label
+              className="min-w-[110px]"
+              htmlFor="workedwith">
+              Worked with:
+            </label>
             <input
               type="checkbox"
               id="workedwith"
@@ -91,7 +127,7 @@ function AddContact() {
             />
           </div>
           <button
-            className="p-2 rounded-full bg-slate-300"
+            className="px-4 py-1 text-white rounded-full bg-blue-950"
             type="submit">
             Hinzufügen
           </button>

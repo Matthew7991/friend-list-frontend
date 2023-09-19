@@ -9,9 +9,17 @@ function Navmain() {
     <header>
       <nav>
         {location === "/" ? (
-          <Link to={"/friends/add"}>Add Friend</Link>
+          <Link
+            className="block ml-auto underline w-fit"
+            to={"/friends/add"}>
+            Add Friend
+          </Link>
         ) : (
-          <Link to={"/"}>Home</Link>
+          <Link
+            className="block ml-auto underline w-fit"
+            to={"/"}>
+            Home
+          </Link>
         )}
       </nav>
     </header>

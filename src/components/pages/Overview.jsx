@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import FriendItem from "../shared/FriendItem"
+import Title from "../shared/Title"
 
 function Overview() {
   const [friends, setFriends] = useState([])
@@ -17,10 +18,9 @@ function Overview() {
   return (
     <main>
       <section>
-        <h1 className="text-2xl font-bold text-red-600">
-          People i can ask for money
-        </h1>
-        <div className="flex flex-wrap gap-4">
+        <Title>People i can ask for money</Title>
+        {/* <div className="flex flex-wrap gap-4"> */}
+        <div className="grid grid-cols-4 gap-4">
           {friends.map((friend, index) => (
             <FriendItem
               key={index}
