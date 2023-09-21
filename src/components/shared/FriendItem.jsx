@@ -7,7 +7,7 @@ function FriendItem({ friend, index }) {
       <h2>
         <Link
           className="font-bold underline"
-          to={`/friends/${index}`}>
+          to={`/friends/${friend._id}`}>
           {friend.firstname} {friend.lastname}
         </Link>
       </h2>
